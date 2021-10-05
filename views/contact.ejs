@@ -1,0 +1,282 @@
+<%- include('page-header') -%>
+
+
+
+
+ 
+    <style>
+        .gm-style .gm-style-mtc label,
+        .gm-style .gm-style-mtc div {
+            font-weight: 400
+        }
+
+        .gm-style .gm-style-mtc ul,
+        .gm-style .gm-style-mtc li {
+            box-sizing: border-box
+        }
+    </style>
+    <style>
+        .gm-control-active>img {
+            box-sizing: content-box;
+            display: none;
+            left: 50%;
+            pointer-events: none;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%)
+        }
+
+        .gm-control-active>img:nth-child(1) {
+            display: block
+        }
+
+        .gm-control-active:hover>img:nth-child(1),
+        .gm-control-active:active>img:nth-child(1) {
+            display: none
+        }
+
+        .gm-control-active:hover>img:nth-child(2),
+        .gm-control-active:active>img:nth-child(3) {
+            display: block
+        }
+    </style>
+    <link type="text/css" rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans:400,500,700|Google+Sans+Text:400">
+    <link type="text/css" rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Google+Sans+Text:400&amp;text=%E2%86%90%E2%86%92%E2%86%91%E2%86%93">
+    <style>
+        .gm-ui-hover-effect {
+            opacity: .6
+        }
+
+        .gm-ui-hover-effect:hover {
+            opacity: 1
+        }
+    </style>
+    <style>
+        .gm-style .gm-style-cc a,
+        .gm-style .gm-style-cc button,
+        .gm-style .gm-style-cc span,
+        .gm-style .gm-style-mtc div {
+            font-size: 10px;
+            box-sizing: border-box
+        }
+    </style>
+    <style>
+        @media print {
+
+            .gm-style .gmnoprint,
+            .gmnoprint {
+                display: none
+            }
+        }
+
+        @media screen {
+
+            .gm-style .gmnoscreen,
+            .gmnoscreen {
+                display: none
+            }
+        }
+    </style>
+    <style>
+        .gm-style-pbc {
+            transition: opacity ease-in-out;
+            background-color: rgba(0, 0, 0, 0.45);
+            text-align: center
+        }
+
+        .gm-style-pbt {
+            font-size: 22px;
+            color: white;
+            font-family: Roboto, Arial, sans-serif;
+            position: relative;
+            margin: 0;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%)
+        }
+    </style>
+    <style>
+        .gm-style img {
+            max-width: none;
+        }
+
+        .gm-style {
+            font: 400 11px Roboto, Arial, sans-serif;
+            text-decoration: none;
+        }
+    </style>
+
+  
+
+<body class="light  pace-done">
+    <div class="pace  pace-inactive">
+        <div class="pace-progress" data-progress-text="100%" data-progress="99"
+            style="transform: translate3d(100%, 0px, 0px);">
+            <div class="pace-progress-inner"></div>
+        </div>
+        <div class="pace-activity"></div>
+    </div>
+
+    <!-- ==================== Start Loading ==================== -->
+    
+    <!-- ==================== End Loading ==================== -->
+
+
+    <!-- ==================== Start progress-scroll-button ==================== -->
+
+   
+
+    <!-- ==================== End progress-scroll-button ==================== -->
+
+
+    <!-- ==================== Start Navgition ==================== -->
+
+    
+
+    <!-- ==================== End Navgition ==================== -->
+
+
+
+
+
+
+
+
+
+
+  <script>
+      const btnMobile = document.getElementById('btn-mobile');
+
+function toggleMenu(event) {
+if (event.type === 'touchstart') event.preventDefault();
+const nav = document.getElementById('nav');
+nav.classList.toggle('active');
+const active = nav.classList.contains('active');
+event.currentTarget.setAttribute('aria-expanded', active);
+if (active) {
+event.currentTarget.setAttribute('aria-label', 'Fechar Menu');
+} else {
+event.currentTarget.setAttribute('aria-label', 'Abrir Menu');
+}
+}
+
+btnMobile.addEventListener('click', toggleMenu);
+btnMobile.addEventListener('touchstart', toggleMenu);
+  </script>
+  
+
+    <div class="wrapper">
+		
+
+        <!-- ==================== Start Header ==================== -->
+
+        <section class="page-header bg-img valign parallaxie" data-background="img/video.jpeg" data-overlay-dark="6"
+            style="background-image: url(&quot;img/video.jpeg&quot;); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center -17.6px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="cont text-center">
+                            <h1>Contato</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== Start Header ==================== -->
+
+
+
+        <!-- ==================== Start Contact ==================== -->
+
+        <section class="contact section-padding">
+            <div class="container">
+                <div class="cont-info mb-50">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="item">
+                                <h6>Endereço</h6>
+                                <p>R. Estrela do Norte, 32 - Centro
+                                    <br>Jandira - SP, CEP: 06600-010
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="item">
+                                <h6>Telefone:</h6>
+                                <p>11 96856-4385</p>
+                                <p>11 99508-7177</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="item">
+                                <h6>E-mail:</h6>
+                                <p><a href="#0">email@benevento.com</a></p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h6>Midias Sociais</h6>
+                            <div class="">
+                                <a href="#0"><i style="font-size: 2rem;" class="ml-1 fa fa-facebook"></i></a>
+                                <a href="#0"><i style="font-size: 2rem;" class="ml-3 fa fa-instagram"></i></a>
+                                <a href="#0"><i style="font-size: 2rem;" class="ml-3 fa fa-whatsapp"></i></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form">
+                    <form action="/contact" method="POST">
+                        <div class="messages"></div>
+
+                        <div class="controls">
+                            <% if (typeof success === 'string') { %>
+                                <div class="alert alert-success" role="alert">
+                                    <%=success%>
+                                </div>
+                                <% } %>
+                                <% if (typeof error === 'string') { %>
+                                <div class="alert alert-danger" role="alert"> <strong>Ops!</strong> <%=error%>
+                                </div>
+                                <% } %>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <input type="text" name="name" id="name" class="form-control" placeholder="Seu nome" value="<%=body.name%>">
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <input type="text" name="email" id="email" class="form-control" placeholder="Seu endereço de e-mail" value="<%=body.email%>">
+
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Escreve alguma coisa"><%=body.message%></textarea>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="text-center mt-20">
+                                        <button type="submit"
+                                            class="btn-curve btn-blc cursor-pointer disabled" value="Enviar"><span>Enviar Mensagem</span></button>
+                                           
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+	 
+		
+ 
+<%- include('page-footer') -%>

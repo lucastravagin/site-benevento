@@ -1,0 +1,202 @@
+ 
+ <%- include('page-header') -%>
+
+ 
+
+  
+
+<body class="light  pace-done">
+    <div class="pace  pace-inactive">
+        <div class="pace-progress" data-progress-text="100%" data-progress="99"
+            style="transform: translate3d(100%, 0px, 0px);">
+            <div class="pace-progress-inner"></div>
+        </div>
+        <div class="pace-activity"></div>
+    </div>
+
+    <!-- ==================== Start Loading ==================== -->
+    
+    <!-- ==================== End Loading ==================== -->
+
+
+    <!-- ==================== Start progress-scroll-button ==================== -->
+
+   
+
+    <!-- ==================== End progress-scroll-button ==================== -->
+
+
+    <!-- ==================== Start Navgition ==================== -->
+
+    
+
+    <!-- ==================== End Navgition ==================== -->
+
+
+
+
+
+
+
+
+
+
+  <script>
+      const btnMobile = document.getElementById('btn-mobile');
+
+function toggleMenu(event) {
+if (event.type === 'touchstart') event.preventDefault();
+const nav = document.getElementById('nav');
+nav.classList.toggle('active');
+const active = nav.classList.contains('active');
+event.currentTarget.setAttribute('aria-expanded', active);
+if (active) {
+event.currentTarget.setAttribute('aria-label', 'Fechar Menu');
+} else {
+event.currentTarget.setAttribute('aria-label', 'Abrir Menu');
+}
+}
+
+btnMobile.addEventListener('click', toggleMenu);
+btnMobile.addEventListener('touchstart', toggleMenu);
+  </script>
+  
+
+    <div class="wrapper">
+		
+
+        <!-- ==================== Start Header ==================== -->
+
+        <section class="page-header bg-img valign parallaxie" data-background="img/video.jpeg" data-overlay-dark="6"
+            style="background-image: url(&quot;img/video.jpeg&quot;); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center -17.6px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="cont text-center">
+                            <h1>Reservar</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== Start Header ==================== -->
+
+
+
+        <!-- ==================== Start Contact ==================== -->
+
+        <section class="contact section-padding">
+            <div class="container">
+                <div class="cont-info mb-50">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="item">
+                                <h6>Endereço</h6>
+                                <p>R. Estrela do Norte, 32 - Centro
+                                    <br>Jandira - SP, CEP: 06600-010
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="item">
+                                <h6>Telefone:</h6>
+                                <p>11 96856-4385</p>
+                                <p>11 99508-7177</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="item">
+                                <h6>E-mail:</h6>
+                                <p><a href="#0">email@benevento.com</a></p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h6>Midias Sociais</h6>
+                            <div class="">
+                                <a href="#0"><i style="font-size: 2rem;" class="ml-1 fa fa-facebook"></i></a>
+                                <a href="#0"><i style="font-size: 2rem;" class="ml-3 fa fa-instagram"></i></a>
+                                <a href="#0"><i style="font-size: 2rem;" class="ml-3 fa fa-whatsapp"></i></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+          
+                    <div class="row">
+                         
+                            <div class="col-md-12 animate-box">
+
+                                <% if (typeof success === 'string') { %>
+                                <div class="alert alert-success" role="alert">
+                                    <%=success%>
+                                </div>
+                                <% } %>
+                                <% if (typeof error === 'string') { %>
+                                <div class="alert alert-danger" role="alert"> <strong>Ops!</strong> <%=error%>
+                                </div>
+                                <% } %>
+            
+                                
+                                <form action="/reservation" method="POST" class="form">
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            
+                                           
+                                        <input type="text" id="inputName" name="name" class="form-control" placeholder="Seu nome" value="<%=body.name%>">
+
+                                        </div>
+                                     
+                                    
+                                        <div class="col-md-4">
+                                             
+                                            <input type="email" id="inputEmail" name="email" placeholder="E-mail" class="form-control" value="<%=body.email%>">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="inputPeople">Pessoas</label>
+                                            <select id="inputPeople" name="people" class="form-control">
+                                                <option value=""> -- selecione -- </option>
+                                                <option <% if (body.people == 1) { %>selected<% } %> value="1">1</option>
+                                                <option <% if (body.people == 2) { %>selected<% } %> value="2">2</option>
+                                                <option <% if (body.people == 3) { %>selected<% } %> value="3">3</option>
+                                                <option <% if (body.people == 4) { %>selected<% } %> value="4">4</option>
+                                                <option <% if (body.people == 5) { %>selected<% } %> value="5+">5+</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        
+                                   
+                                        <div class="col-md-6">
+                                            <label for="inputPeople">Escolha uma data</label>
+                                            <input type="text" id="inputDate" name="date" class="form-control" value="
+                                            <%=body.date%>" placeholder="Seu nome" >
+                                        </div>
+                                    
+                                  
+                                        <div class="col-md-6">
+                                            <label for="inputPeople">Pessoas</label>
+                                            <input type="text" id="inputTime" name="time" class="form-control" value="
+                                            <%=body.time%>" >
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <input type="submit" class="btn btn-primary btn-block" value="Reservar Agora">
+                                        </div>
+                                    </div>
+             
+                                </form>
+                            </div>
+                     
+                </div>
+               
+                    
+                </div>
+            </div>
+        </section>
+	 
+		
+ 
+<%- include('page-footer') -%>
