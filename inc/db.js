@@ -11,3 +11,6 @@ const connection = mysql.createConnection({
 });
 
 module.exports = connection;
+
+
+sudo certbot --nginx -d espacobenevento.com.br -d www.espacobenevento.com.br
