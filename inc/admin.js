@@ -30,7 +30,7 @@ module.exports = (io) => {
 
                             let user = results[0];
 
-                            req.session.user = {emai: "joao@email.com", name: "Joao"};
+                            req.session.user = user;
 
                             s(user);
 

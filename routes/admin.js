@@ -27,8 +27,8 @@ module.exports = (io) => {
 
             res.render('admin/index', {
                 url: req.url,
-                user: {emai: "joao@email.com", name: "Joao"},
-                //user: req.session.user,
+                //user: {emai: "joao@email.com", name: "Joao"},
+                user: req.session.user,
                 data
             });
 
@@ -82,7 +82,7 @@ module.exports = (io) => {
 
             res.render('admin/contacts', {
                 url: req.url,
-               user: {emai: "joao@email.com", name: "Joao"},
+               user: req.session.user,
                 data
             });
 
@@ -164,7 +164,7 @@ module.exports = (io) => {
 
             res.render('admin/reservations', {
                 url: req.url,
-               user: {emai: "joao@email.com", name: "Joao"},
+               user: req.session.user,
                 pagination,
                 moment,
                 date: {
@@ -296,7 +296,7 @@ module.exports = (io) => {
 
             res.render('admin/emails', {
                 url: req.url,
-               user: {emai: "joao@email.com", name: "Joao"},
+               user: req.session.user,
                 data
             });
 
